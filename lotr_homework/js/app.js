@@ -130,6 +130,16 @@ const makeBaddies = () => {
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append them to Mordor
+  let badList = $('<ul></ul');
+
+  for (let i = 0; i < baddies.length; i++) {
+    newBad = document.createElement('li');
+    newBad.className="baddy";
+    newBad.innerHTML=baddies[i];
+    badList.append(newBad); 
+  }  
+  let findMordor = document.querySelector('#Mordor');
+  badList.appendTo(findMordor);
 };
 
 // COMMIT YOUR WORK
