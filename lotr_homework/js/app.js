@@ -178,7 +178,8 @@ budList.appendTo(sideBar);
 const leaveTheShire = () => {
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-
+  themElves = document.querySelector("#Rivendell")
+  $("#The-Shire:nth-child(1)").appendTo(themElves);
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 };
