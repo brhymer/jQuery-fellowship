@@ -86,7 +86,16 @@ const makeHobbits = () => {
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
+  let hobList = $('<ul></ul');
 
+  for (let i = 0; i < hobbits.length; i++) {
+    newHob = document.createElement('li');
+    newHob.className="hobbit";
+    newHob.innerHTML=hobbits[i];
+    hobList.append(newHob); 
+  }  
+  let findShire = document.querySelector('#The-Shire');
+  hobList.appendTo(findShire);
 };
 
 // COMMIT YOUR WORK
