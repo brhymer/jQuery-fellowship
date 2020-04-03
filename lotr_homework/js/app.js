@@ -57,12 +57,12 @@ const makeMiddleEarth = () => {
    landId=lands[i];
   //  console.log(i);
   let art = document.createElement('div');
-  // console.log(art);
+  console.log(art);
   //   3b. gives each land article an `id` tag of the corresponding land name
    art.id=landId;
   //  console.log(art.id);
   //   3c. includes an h1 with the name of the land inside each land article
-   art.append("h1", landId);
+   art.innerHTML =`<h1>${landId}</h1>`;
   //  console.log(art);
   //   3d. appends each land to the middle-earth section
    midEarthSec.append(art);
@@ -107,9 +107,10 @@ const makeHobbits = () => {
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-
+  let oneRing = document.createElement("div");
+  oneRing.id="the-ring";
   // 2. add the ring as a child of Frodo
-
+  document.getElementsByClassName("hobbit")[0].appendChild(oneRing);
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
