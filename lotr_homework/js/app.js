@@ -44,10 +44,10 @@ const makeMiddleEarth = () => {
 
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
 
-  console.log("Trying to make middle earth.");
+  // console.log("Trying to make middle earth.");
 
   // 1. create a section tag with an id of middle-earth
-   let midEarthSec = $('<section id="middle earth"></section>');
+   let midEarthSec = $('<section id="middle-earth"></section>');
   // 2. append the section to the body of the DOM.
    $("body").append(midEarthSec);
   // 3. use a for loop to iterate over the lands array that does the following:
@@ -57,13 +57,11 @@ const makeMiddleEarth = () => {
    landId=lands[i];
   //  console.log(i);
   let art = document.createElement('div');
-  console.log(art);
   //   3b. gives each land article an `id` tag of the corresponding land name
    art.id=landId;
   //  console.log(art.id);
   //   3c. includes an h1 with the name of the land inside each land article
    art.innerHTML =`<h1>${landId}</h1>`;
-  //  console.log(art);
   //   3d. appends each land to the middle-earth section
    midEarthSec.append(art);
   }
@@ -77,7 +75,7 @@ const makeMiddleEarth = () => {
 // ============
 const makeHobbits = () => {
 
-  console.log('Make hobbits');
+  // console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
 
@@ -151,11 +149,24 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-
+ const sideBar = document.createElement('aside');
+ const findMidEarth = document.querySelector('#middle-earth');
+ findMidEarth.append(sideBar);
   // 2. display an unordered list of buddies in the aside
+  let budList = $('<ul></ul>');
+  for (let i = 0; i < buddies.length; i++) {
+    let newBud = document.createElement('li');
 
   // 3. give each of the buddies a class of "buddy"
-
+  newBud.className="buddy";
+  newBud.innerHTML=buddies[i];
+  console.log(newBud);
+  budList.append(newBud); 
+  // console.log(budList);
+  // sideBar.innerHTML =budList ;
+}  
+// console.log(sideBar);
+budList.appendTo(sideBar);
 };
 
 // COMMIT YOUR WORK
