@@ -56,7 +56,7 @@ const makeMiddleEarth = () => {
   //   3a. creates an article tag (there should be one for each land when the loop is done)
    landId=lands[i];
   //  console.log(i);
-  let art = document.createElement('div');
+  let art = document.createElement('article');
   //   3b. gives each land article an `id` tag of the corresponding land name
    art.id=landId;
   //  console.log(art.id);
@@ -179,7 +179,9 @@ const leaveTheShire = () => {
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
   let themElves = document.querySelector("#Rivendell")
-  $("#The-Shire:nth-child(1)").appendTo(themElves);
+  // console.log($("#The-Shire:nth-child(1)"));
+  let hobs = $("#The-Shire ul");
+  hobs.appendTo(themElves);
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 };
@@ -209,13 +211,20 @@ viggo.innerText = "Aragorn";
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-
+  let fellows = document.createElement('div');
+  fellows.id="the-fellowship";
   // 2. add an h1 with the text 'The Fellowship' to this new div
-
+  let fellows2 = document.createElement('h1');
+  fellows.innerText="The Fellowship";
+  fellows.appendChild(fellows2);
   // 3. append the fellowship to middle-earth
-
+  const findMidEarth = document.querySelector('#middle-earth');
+  findMidEarth.append(fellows);
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
+  let hobs2 = $("#Rivendell ul");
+  let buds = $("aside ul")
+  hobs2.appendTo(fellows);
+  buds.appendTo(fellows);
 };
 
 // COMMIT YOUR WORK
