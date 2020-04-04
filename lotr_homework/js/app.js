@@ -291,11 +291,16 @@ dark.append(sean);
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-
+  let smeagol = document.createElement('div');
+  smeagol.id=("gollum");
+  let dark =$("#Mordor");
+  dark.prepend(smeagol);
   // 2. Move the ring from Frodo and give it to Gollum
-
+  let precious = document.querySelector("#the-ring");
+  smeagol.append(precious);
   // 3. Move Gollum into Mount Doom
-
+  let volc = document.querySelector("#mount-doom");
+  volc.append(smeagol);
 };
 
 // COMMIT YOUR WORK
