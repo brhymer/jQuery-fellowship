@@ -271,11 +271,11 @@ const hornOfGondor = () => {
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-let elijah = $(".hobbit").get(0);
-let sean = $(".hobbit").get(1);
-let dark =$("#Mordor");
-dark.append(elijah);
-dark.append(sean);
+ let elijah = $(".hobbit").get(0);
+ let sean = $(".hobbit").get(1);
+ let dark = $("#Mordor");
+ dark.append(elijah);
+ dark.append(sean);
   // 2. add a div with an id of 'mount-doom' to Mordor
  let volc = document.createElement('div');
  volc.id=("mount-doom");
@@ -312,11 +312,21 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+let smeagol = document.querySelector("#gollum");
+smeagol.remove();
   // 2. remove all the baddies from the DOM
-
+let bads = $("#Mordor ul");
+bads.remove();
   // 3. Move all the hobbits back to the shire
-
+let home = document.querySelector("#The-Shire");
+let hob1 = document.querySelector("#Mordor li");
+home.append(hob1);
+let hob2 = document.querySelector("#Mordor li");
+home.append(hob2);
+let hob3 = document.querySelector("#the-fellowship li")
+home.append(hob3);
+let hob4 = document.querySelector("#the-fellowship li")
+home.append(hob4);
 };
 
 // COMMIT YOUR WORK
