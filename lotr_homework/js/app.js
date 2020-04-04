@@ -215,7 +215,7 @@ const forgeTheFellowShip = () => {
   fellows.id="the-fellowship";
   // 2. add an h1 with the text 'The Fellowship' to this new div
   let fellows2 = document.createElement('h1');
-  fellows.innerText="The Fellowship";
+  fellows2.innerText="The Fellowship";
   fellows.appendChild(fellows2);
   // 3. append the fellowship to middle-earth
   const findMidEarth = document.querySelector('#middle-earth');
@@ -236,11 +236,12 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-
+  let ian = $(".buddy").get(0);
+  ian.innerText="Gandalf the White";
   // 2. add a class "the-white" to this element
-
+  ian.classList.add("the-white");
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
-
+  // done
 };
 
 // COMMIT YOUR WORK
