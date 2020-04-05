@@ -52,14 +52,14 @@ const makeMiddleEarth = () => {
    $("body").append(midEarthSec);
   // 3. use a for loop to iterate over the lands array that does the following:
    for (let i = 0; i < lands.length; i++) {
-  //  console.log(`i: ${lands[i]}`);
+
   //   3a. creates an article tag (there should be one for each land when the loop is done)
    landId=lands[i];
   //  console.log(i);
   let art = document.createElement('article');
   //   3b. gives each land article an `id` tag of the corresponding land name
    art.id=landId;
-  //  console.log(art.id);
+
   //   3c. includes an h1 with the name of the land inside each land article
    art.innerHTML =`<h1>${landId}</h1>`;
   //   3d. appends each land to the middle-earth section
@@ -162,8 +162,7 @@ const makeBuddies = () => {
   newBud.innerHTML=buddies[i];
   console.log(newBud);
   budList.append(newBud); 
-  // console.log(budList);
-  // sideBar.innerHTML =budList ;
+
 }  
 // console.log(sideBar);
 budList.appendTo(sideBar);
@@ -179,7 +178,6 @@ const leaveTheShire = () => {
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
   let themElves = document.querySelector("#Rivendell")
-  // console.log($("#The-Shire:nth-child(1)"));
   let hobs = $("#The-Shire ul");
   hobs.appendTo(themElves);
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
@@ -196,7 +194,6 @@ const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 let viggo = $(".buddy").get(3);
-// console.log(viggo);
 viggo.innerText = "Aragorn";
   // hint: You can get a list of elements by tag name, such as 'aside'
 
